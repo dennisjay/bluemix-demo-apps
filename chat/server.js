@@ -98,7 +98,7 @@ function reloadUsers() { // Send the count of the users to all
     io.sockets.emit('nbUsers', {"nb": users});
 }
 function pseudoSet(socket) { // Test if the user has a name
-    return socket.pseudo !== 'undefined';
+    return typeof socket.pseudo !== 'undefined';
 }
 function returnPseudo(socket) { // Return the name of the user
     return socket.pseudo ;
